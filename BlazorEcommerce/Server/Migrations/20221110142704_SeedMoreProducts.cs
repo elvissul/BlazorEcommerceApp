@@ -4,7 +4,7 @@
 
 namespace BlazorEcommerce.Server.Migrations
 {
-    public partial class SeedMoreProduct : Migration
+    public partial class SeedMoreProducts : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

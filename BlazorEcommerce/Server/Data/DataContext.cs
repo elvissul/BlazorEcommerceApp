@@ -9,11 +9,13 @@ namespace BlazorEcommerce.Server.Data
         }
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories  { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder) {
+    protected override void OnModelCreating(ModelBuilder modelBuilder) {
             modelBuilder.Entity<Category>().HasData(
-                new Category { 
-                    id=1,
+                new Category
+                {
+                    id = 1,
                     Name = "Books",
                     Url = "books"
                 },

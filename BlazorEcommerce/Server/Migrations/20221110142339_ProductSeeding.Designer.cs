@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlazorEcommerce.Server.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221109111715_ProductSeeding")]
+    [Migration("20221110142339_ProductSeeding")]
     partial class ProductSeeding
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

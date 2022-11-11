@@ -16,7 +16,7 @@ namespace BlazorEcommerce.Server.Migrations
                 defaultValue: 0);
 
             migrationBuilder.CreateTable(
-                name: "Category",
+                name: "Categories",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "int", nullable: false)
@@ -26,21 +26,21 @@ namespace BlazorEcommerce.Server.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Category", x => x.id);
+                    table.PrimaryKey("PK_Categories", x => x.id);
                 });
 
             migrationBuilder.InsertData(
-                table: "Category",
+                table: "Categories",
                 columns: new[] { "id", "Name", "Url" },
                 values: new object[] { 1, "Books", "books" });
 
             migrationBuilder.InsertData(
-                table: "Category",
+                table: "Categories",
                 columns: new[] { "id", "Name", "Url" },
                 values: new object[] { 2, "Movies", "movies" });
 
             migrationBuilder.InsertData(
-                table: "Category",
+                table: "Categories",
                 columns: new[] { "id", "Name", "Url" },
                 values: new object[] { 3, "Games", "games" });
 
@@ -71,10 +71,10 @@ namespace BlazorEcommerce.Server.Migrations
                 column: "CategoryId");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Products_Category_CategoryId",
+                name: "FK_Products_Categories_CategoryId",
                 table: "Products",
                 column: "CategoryId",
-                principalTable: "Category",
+                principalTable: "Categories",
                 principalColumn: "id",
                 onDelete: ReferentialAction.Cascade);
         }
@@ -82,11 +82,11 @@ namespace BlazorEcommerce.Server.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Products_Category_CategoryId",
+                name: "FK_Products_Categories_CategoryId",
                 table: "Products");
 
             migrationBuilder.DropTable(
-                name: "Category");
+                name: "Categories");
 
             migrationBuilder.DropIndex(
                 name: "IX_Products_CategoryId",

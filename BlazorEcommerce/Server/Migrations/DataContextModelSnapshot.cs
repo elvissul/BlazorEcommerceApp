@@ -39,7 +39,7 @@ namespace BlazorEcommerce.Server.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Category");
+                    b.ToTable("Categories");
 
                     b.HasData(
                         new

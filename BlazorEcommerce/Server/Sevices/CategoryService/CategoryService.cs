@@ -15,7 +15,7 @@ namespace BlazorEcommerce.Server.Sevices.CategoryService
             var categories = await _context.Categories.ToListAsync();
             return new ServiceResponse<List<Category>>
             {
-                Date = categories
+                Data = categories
             };
         }
     }
